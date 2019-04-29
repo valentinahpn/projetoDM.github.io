@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>Login</title>
+</head>
+<body>
+<h1>Editar!</h1>
+<form method="POST" action="/editar">
+<input type="hidden" value="<%= usuario.id %>" name="id" />
+Usuário<input type="TEXT" id="nome" name="nome" size="40" value="<%= usuario.nome %>"><br>
+Nome<input type="TEXT" id="endereco" name="endereco" size="40" value="<%= usuario.endereco
+%>"><br>
+CPF<input type="TEXT" id="cpf" name="cpf" size="40" value="<%= usuario.cpf %>"><br>
+<br>
+<input type="submit" id="submit" value="Submit">
+</form>
+</body>
+</html>
