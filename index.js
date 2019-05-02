@@ -41,11 +41,15 @@ app.post('/cadastro'
     var endereco = request.body.endereco;
     var cpf = request.body.cpf;
     var senha = sha1(request.body.senha);
+    var motivo = request.body.motivo;
+    var data = request.body.data;
     const usuario = {
       'nome': nome,
       'endereco': endereco,
       'cpf': cpf,
       'senha': senha
+      'data': data
+      'motivo': motivo
     };
     connection.query('INSERT INTO usuario SET ?'
       , usuario, (err, resp) => {
@@ -61,7 +65,7 @@ app.post('/cadastro'
       , { msg: nome + " Cadastrado com Sucesso" });
   });
 
-app.get('/editar/:id'
+app.get('/editar.html/:id'
   , (req, resposta) => {
     var id = req.params.id;
     connection.query('SELECT * FROM `usuario`Where id = ?'
@@ -78,20 +82,22 @@ app.get('/editar/:id'
       });
   });
 
-app.post('/editar'
+app.post('/editar.html'
   , function (request, res) {
     var nome = request.body.nome;
     var endereco = request.body.endereco;
     var cpf = request.body.cpf;
     var id = request.body.id;
+    var motivo = request.body.motivo;
+    var data = request.body.data;
     connection.query(
       'UPDATE usuario SET nome = ?, endereco = ?, cpf = ? Where id = ?'
-      , [nome, endereco, cpf, id],
+      , [nome, endereco, cpf, id, motivo, data],
       (err, result) => {
         if (err) throw err;
         console.log(`Atualizado ${result.changedRows} row(s)`);
       });
-    res.redirect('/admin');
+    res.redirect('/admin.html');
   });
 
 
@@ -103,7 +109,7 @@ app.get('/deletar/:id'
         console.log("Registro Deletado!!");
         console.log(result);
       });
-    res.redirect('/admin');
+    res.redirect('/admin.html');
   });
 
 app.listen(3000, () => console.log('server started'));
