@@ -39,7 +39,8 @@
 		<p><a href="editar.html/<%= usuario.id %>"> <%=usuario.nome %></a> |
 		<a href="deletar/<%= usuario.id %>"> Deletar</a></p>
 		<% }); %>
-			<a href="cadastro.html"> Cadastrar Novo Usuario </a>
+			<form method="get" action="cadastro.html"><button type="submit">Cadastrar Novo usuário</button></form
+			<form method="get" action="editar.html"><button type="submit">Editar</button></form
 
 			<div class="rodape">
 				DogAdote - (61) 9 9925-2670 ©2019
