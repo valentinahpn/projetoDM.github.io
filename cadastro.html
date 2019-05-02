@@ -33,18 +33,17 @@
 				<div class="artigos">
 					<div class="espacamento">
 						<h1>Cadastro</h1>
-							<form method="post">
-						<p>Nome Completo: <input type="text" name="Nome Completo" size="40"><br/></p>
-
-						<p>Data de Nascimento: <input type="date" name="Data de Nascimento"><br/></p>
-						
-						<p>E-mail: <input type="text" name="Email" size="30"><br/></p>
-
-						<p>Endereço: <input type="text" name="Nome Completo" size="40"><br/></p>
-
-						<p>Por que você quer adotar?</p><p><textarea rows="10" cols="40" maxlength="500"></textarea></p>
-						
-						</form>
+				<h2><%= msg %></h2>
+				<form method="POST" action="/cadastro">
+				Usuário<input type="TEXT" id="nome" name="nome" size="40"><br>
+				Nome<input type="TEXT" id="endereco" name="endereco" size="40"><br>
+	CPF<input type="TEXT" id="cpf" name="cpf" size="40"><br>
+	Senha<input type="password" name="senha" id="senha" size="40"><br>
+<input type="submit" id="submit" value="Submit">
+</form>
+<a href="/listar">Ver cadastrados</a>
+</body>
+</html>
 
 					<div class="Quero Adotar">
 						<form method="get" action="cadastro.html"><button type="submit">Enviar</button></form>
