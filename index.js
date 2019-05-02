@@ -18,7 +18,7 @@ app.use(express.static('public'));
 
 app.engine('html', require('ejs').renderFile);
 
-app.get('/', (req, res) => {
+app.get('/projeto', (req, res) => {
   res.send('Hello Express app');
 });
 app.get('/listar', (req, resposta) => {
@@ -27,12 +27,12 @@ app.get('/listar', (req, resposta) => {
       console.log('error', err.message, err.stack)
     }
     else {
-      resposta.render(__dirname + '/views/listar.html', { usuarios: rows });
+      resposta.render(__dirname + '/listar.html', { usuarios: rows });
     }
   });
 });
 app.get('/cadastro', (req, resposta) => {
-  resposta.render(__dirname + '/views/cadastro.html', { msg: "Cadastrado de novos usuarios" });
+  resposta.render(__dirname + '/cadastro.html', { msg: "Cadastrado de novos usuarios" });
 });
 
 app.post('/cadastro'
@@ -57,7 +57,7 @@ app.post('/cadastro'
           console.log('ID do ultimo inserido:'
             , resp.insertId);
       });
-    res.render(__dirname + '/views/cadastro.html'
+    res.render(__dirname + '/cadastro.html'
       , { msg: nome + " Cadastrado com Sucesso" });
   });
 
@@ -72,7 +72,7 @@ app.get('/editar/:id'
         }
         else {
           console.log(rows[0]);
-          resposta.render(__dirname + '/views/editar.html'
+          resposta.render(__dirname + '/editar.html'
             , { usuario: rows[0] });
         }
       });
