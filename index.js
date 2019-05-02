@@ -21,13 +21,13 @@ app.engine('html', require('ejs').renderFile);
 app.get('/projeto', (req, res) => {
   res.send('Hello Express app');
 });
-app.get('/listar', (req, resposta) => {
+app.get('/admin', (req, resposta) => {
   connection.query('SELECT * FROM `usuario`', function (err, rows, fields) {
     if (err) {
       console.log('error', err.message, err.stack)
     }
     else {
-      resposta.render(__dirname + '/listar.html', { usuarios: rows });
+      resposta.render(__dirname + '/admin.html', { usuarios: rows });
     }
   });
 });
@@ -91,7 +91,7 @@ app.post('/editar'
         if (err) throw err;
         console.log(`Atualizado ${result.changedRows} row(s)`);
       });
-    res.redirect('/listar');
+    res.redirect('/admin');
   });
 
 
@@ -103,7 +103,7 @@ app.get('/deletar/:id'
         console.log("Registro Deletado!!");
         console.log(result);
       });
-    res.redirect('/listar');
+    res.redirect('/admin');
   });
 
 app.listen(3000, () => console.log('server started'));
