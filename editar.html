@@ -1,20 +1,53 @@
-<script type="text/javascript" src="index.js"></script>
-
-
+<!DOCTYPE html>
 <html>
-<head>
-<title>Login</title>
-</head>
-<body>
-<h1>Editar!</h1>
-<form method="POST" action="/editar">
-<input type="hidden" value="<%= usuario.id %>" name="id" />
-Usuário<input type="TEXT" id="nome" name="nome" size="40" value="<%= usuario.nome %>"><br>
-Nome<input type="TEXT" id="endereco" name="endereco" size="40" value="<%= usuario.endereco
-%>"><br>
-CPF<input type="TEXT" id="cpf" name="cpf" size="40" value="<%= usuario.cpf %>"><br>
-<br>
-<input type="submit" id="submit" value="Submit">
-</form>
-</body>
+	<head>
+		<meta charset="UTF-8">
+
+		<link rel="stylesheet" type="text/css" href="projeto.css">
+		<script type="text/javascript" src="index.js"></script>
+
+		<title>DogAdote</title>
+	</head>
+
+	<body>
+		<div class="principal">
+			<div class="cabecalho">
+				<div class="logo-cabecalho">
+					<a href="projeto.html">DogAdote</a>
+				</div>
+				
+				<div class="pesquisa">
+					<input type="text" />
+					<input type="submit" value="Pesquisar" />
+				</div>
+			</div>
+			<div class="menu">
+				<ul>
+					<li> <a href="projeto.html">Início</a> </li>
+					<li> <a href="paraAdocao.html">Para adoção</a> </li>
+					<li> <a href="cadastro.html">Cadastro</a> </li>
+					<li> <a href="contato.html">Contato</a> </li>
+					<li> <a href="admin.html">Administração</a> </li>
+				</ul>
+			</div>
+			<div class="corpo">
+				<div class="artigos">
+					<div class="espacamento">
+						<h1>Administração</h1>
+						<h1>Editar!</h1>
+      <form method="POST" action="/editar">
+      <input type="hidden" value="<%= usuario.id %>" name="id" />
+      Usuário<input type="TEXT" id="nome" name="nome" size="40" value="<%= usuario.nome %>"><br>
+    Nome<input type="TEXT" id="endereco" name="endereco" size="40" value="<%= usuario.endereco
+    %>"><br>
+    CPF<input type="TEXT" id="cpf" name="cpf" size="40" value="<%= usuario.cpf %>"><br>
+    <br>
+    <input type="submit" id="submit" value="Submit">
+        </form>
+			<div class="rodape">
+				DogAdote - (61) 9 9925-2670 ©2019
+			</div>
+		</div>
+	</body>
 </html>
+
