@@ -36,7 +36,7 @@
 						<h1>Administração</h1>
 						<h2>Usuários Cadastrados</h2>
 		<% usuarios.forEach( (usuario) => { %>
-		<p><a href="editar/<%= usuario.id %>"> <%=usuario.nome %></a> |
+		<p><a href="editar.html/<%= usuario.id %>"> <%=usuario.nome %></a> |
 		<a href="deletar/<%= usuario.id %>"> Deletar</a></p>
 		<% }); %>
 			<a href="cadastro.html"> Cadastrar Novo Usuario </a>
