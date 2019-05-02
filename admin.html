@@ -33,6 +33,12 @@
 				<div class="artigos">
 					<div class="espacamento">
 						<h1>Administração</h1>
+						<h1>Usuários Cadastrados</h1>
+		<% usuarios.forEach( (usuario) => { %>
+		<p><a href="editar/<%= usuario.id %>"> <%=usuario.nome %></a> |
+		<a href="deletar/<%= usuario.id %>"> Deletar</a></p>
+		<% }); %>
+			<a href="cadastro.html"> Cadastrar Novo Usuario </a>
 
 			<div class="rodape">
 				DogAdote - (61) 9 9925-2670 ©2019
