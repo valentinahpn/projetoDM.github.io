@@ -36,17 +36,23 @@
 						<h1>Cadastro</h1>
 				<h3><%= msg %></h3>
 				<form method="POST" action="/cadastro.html">
-					<p>Usuário <input type="TEXT" id="nome" name="nome" size="40"><br></p>
+				<p>Usuário <input type="TEXT" id="nome" name="nome" size="40"><br></p>
+					
 				<p>Nome <input type="TEXT" id="endereco" name="endereco" size="40"><br></p>
+				
+				<p>Data de Nascimento: <input type="date" name="Data de Nascimento"><br/></p>
 			
-	<p>CPF <input type="TEXT" id="cpf" name="cpf" size="40"><br></p>
-	<p>Senha <input type="password" name="senha" id="senha" size="40"><br></p>
+				<p>CPF <input type="TEXT" id="cpf" name="cpf" size="40"><br></p>
+					
+				<p>Senha <input type="password" name="senha" id="senha" size="40"><br></p>
+					
+				<p>Por que você quer adotar?</p><p><textarea rows="10" cols="40" maxlength="500"></textarea></p>
 
 </form>
 
 
 				
-						<form method="get" action="cadastro.html"><button type="submit">Enviar</button></form>
+			<form method="get" action="cadastro.html"><button type="submit">Enviar</button></form>
 			<a href="/admin.html"><button type="submit">Usuários Cadastrados</button></a>
 
 										
