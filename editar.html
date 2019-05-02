@@ -37,13 +37,23 @@
 						<h1>Editar!</h1>
       <form method="POST" action="/editar">
       <input type="hidden" value="<%= usuario.id %>" name="id" />
-      Usuário<input type="TEXT" id="nome" name="nome" size="40" value="<%= usuario.nome %>"><br>
-    Nome<input type="TEXT" id="endereco" name="endereco" size="40" value="<%= usuario.endereco
-    %>"><br>
-    CPF<input type="TEXT" id="cpf" name="cpf" size="40" value="<%= usuario.cpf %>"><br>
-    <br>
-    <input type="submit" id="submit" value="Submit">
-        </form>
+				<form method="POST" action="/cadastro.html">
+				<p>Usuário <input type="TEXT" id="nome" name="nome" size="40"><br></p>
+					
+				<p>Nome <input type="TEXT" id="endereco" name="endereco" size="40"><br></p>
+				
+				<p>Data de Nascimento: <input type="date" name="Data de Nascimento"><br/></p>
+			
+				<p>CPF <input type="TEXT" id="cpf" name="cpf" size="40"><br></p>
+					
+				<p>Senha <input type="password" name="senha" id="senha" size="40"><br></p>
+					
+				<p>Por que você quer adotar?</p><p><textarea rows="10" cols="40" maxlength="500"></textarea></p>
+
+</form>
+    
+					<form method="get" action="cadastro.html"><button type="submit">Atualizar</button></form>
+        
 			<div class="rodape">
 				DogAdote - (61) 9 9925-2670 ©2019
 			</div>
